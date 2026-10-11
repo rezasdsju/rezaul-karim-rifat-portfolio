@@ -11,9 +11,20 @@
   "githubUrl": "https://github.com/rezasdsju/blog_project_django.git",
   "liveUrl": "https://blog.satbeta.top/"
 },
-
 {
   "id": "2",
+  "imageUrl": "/bazar-dor-1.png",
+  "title": "Bazar-Dor",
+  "description": "A Price tracking application of essential Products",
+  "framework": "Next.js",
+  "language": "Better Auth",
+  "additionalTechnology": "MongoDB",
+  "rating": 5,
+  "githubUrl": "https://github.com/rezasdsju/bazar-dor.git",
+  "liveUrl": "https://bazar-dor-two.vercel.app/"
+},
+{
+  "id": "3",
   "imageUrl": "/bnews-1.png",
   "title": "Bangla News 24",
   "description": "A modern demo online news portal that allows users to explore categorized news previews and read detailed news articles.",
@@ -26,7 +37,7 @@
 },
 
 {
-  "id": "3",
+  "id": "4",
   "imageUrl": "/fit-log.png",
   "title": "Fit-Log",
   "description": "FitLog is a responsive workout tracking app built with Next.js, React, and TypeScript. Users can explore workouts, view details, create workout plans, and save workouts for later.",
@@ -38,7 +49,7 @@
   "liveUrl": "https://fit-log-weld-xi.vercel.app/"
 },
 {
-  "id": "4",
+  "id": "5",
   "imageUrl": "/book-vibe.png",
   "title": "Book Vibe",
   "description": " A responsive book management web application that allows users to explore books, view detailed information, manage their Read List and Wish List, sort saved books, and visualize their reading progress.",
@@ -50,7 +61,7 @@
   "liveUrl": "https://book-vibe-b1db.vercel.app/"
 },
 {
-  "id": "5",
+  "id": "6",
   "imageUrl": "/natures-platter.png",
   "title": "Nature's Platter",
   "description": "A responsive food website showcasing fresh and healthy food items with a clean and user-friendly interface.",
@@ -62,7 +73,7 @@
   "liveUrl": "https://rezasdsju.github.io/Nature-s-Platter/"
 },
 {
-  "id": "6",
+  "id": "7",
   "imageUrl": "/devstack.png",
   "title": "DevStack",
   "description": "A developer-focused web application built with React and TypeScript for exploring development resources and technologies.",
@@ -77,7 +88,7 @@
     
 
 {
-  "id": "7",
+  "id": "8",
   "imageUrl": "/bpl-dream.png",
   "title": "BPL Dream Eleven",
   "description": "A cricket team management web application where users can explore players and build their own dream team.",
@@ -91,14 +102,14 @@
 
 
 {
-  "id": "8",
+  "id": "9",
   "imageUrl": "/country-image.png",
   "title": "Country Explorer",
   "description": "A country exploration web application where users can explore country information, view details, and mark countries as visited.",
   "framework": "React",
   "language": "TypeScript",
   "additionalTechnology": "Tailwind CSS",
-  "rating": 5,
+  "rating": 4,
   "githubUrl": "https://github.com/rezasdsju/Country-Explorer-React-TS-.git",
   "liveUrl": "https://lighthearted-chimera-34f191.netlify.app/"
 },
@@ -106,7 +117,7 @@
 
 
 {
-  "id": "9",
+  "id": "10",
   "imageUrl": "/grocery.png",
   "title": "Grocery Store",
   "description": "A grocery product search application where users can search for products and filter items based on their stock availability.",
@@ -120,7 +131,7 @@
 
 
 {
-  "id": "10",
+  "id": "11",
   "imageUrl": "/tic-tac.png",
   "title": "Tic-Tac-Toe",
   "description": "A classic Tic-Tac-Toe game built with React and TypeScript, allowing two players to play the game and displaying the winner when the game ends.",
@@ -132,14 +143,14 @@
   "liveUrl": "https://tic-tac-toe-game-eta-beige.vercel.app/"
 },
 {
-  "id": "11",
+  "id": "12",
   "imageUrl": "/portfolio.png",
   "title": "Developer Portfolio",
   "description": "A personal developer portfolio website showcasing my skills, projects, and experience.",
   "framework": "React",
   "language": "TypeScript",
   "additionalTechnology": "Tailwind CSS",
-  "rating": 5,
+  "rating": 4,
   "githubUrl": "https://github.com/rezasdsju/developer-portfolio.git",
   "liveUrl": "https://developer-portfolio-1e1b.vercel.app/"
 }
