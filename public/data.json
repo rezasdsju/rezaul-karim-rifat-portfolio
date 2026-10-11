@@ -60,20 +60,9 @@
   "githubUrl": "https://github.com/rezasdsju/book-vibe.git",
   "liveUrl": "https://book-vibe-b1db.vercel.app/"
 },
+
 {
   "id": "6",
-  "imageUrl": "/natures-platter.png",
-  "title": "Nature's Platter",
-  "description": "A responsive food website showcasing fresh and healthy food items with a clean and user-friendly interface.",
-  "framework": "Tailwind",
-  "language": "HTML",
-  "additionalTechnology": "Responsive",
-  "rating": 5,
-  "githubUrl": "https://github.com/rezasdsju/Nature-s-Platter.git",
-  "liveUrl": "https://rezasdsju.github.io/Nature-s-Platter/"
-},
-{
-  "id": "7",
   "imageUrl": "/devstack.png",
   "title": "DevStack",
   "description": "A developer-focused web application built with React and TypeScript for exploring development resources and technologies.",
@@ -88,7 +77,7 @@
     
 
 {
-  "id": "8",
+  "id": "7",
   "imageUrl": "/bpl-dream.png",
   "title": "BPL Dream Eleven",
   "description": "A cricket team management web application where users can explore players and build their own dream team.",
@@ -102,7 +91,7 @@
 
 
 {
-  "id": "9",
+  "id": "8",
   "imageUrl": "/country-image.png",
   "title": "Country Explorer",
   "description": "A country exploration web application where users can explore country information, view details, and mark countries as visited.",
@@ -114,7 +103,18 @@
   "liveUrl": "https://lighthearted-chimera-34f191.netlify.app/"
 },
 
-
+{
+  "id": "9",
+  "imageUrl": "/natures-platter.png",
+  "title": "Nature's Platter",
+  "description": "A responsive food website showcasing fresh and healthy food items with a clean and user-friendly interface.",
+  "framework": "Tailwind",
+  "language": "HTML",
+  "additionalTechnology": "Responsive",
+  "rating": 5,
+  "githubUrl": "https://github.com/rezasdsju/Nature-s-Platter.git",
+  "liveUrl": "https://rezasdsju.github.io/Nature-s-Platter/"
+},
 
 {
   "id": "10",
