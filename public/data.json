@@ -19,7 +19,7 @@
   "description": "A modern demo online news portal that allows users to explore categorized news previews and read detailed news articles.",
   "framework": "Next.js",
   "language": "TypeScript",
-  "additionalTechnology": "Tailwind",
+  "additionalTechnology": "Better Auth",
   "rating": 5,
   "githubUrl": "https://github.com/rezasdsju/bangla-news-24.git",
   "liveUrl": "https://bangla-news-24-js4q.vercel.app/"
