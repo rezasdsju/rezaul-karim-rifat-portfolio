@@ -19,6 +19,7 @@ const projectsDataPromise = projectsDataFetch()
 
 const ProjectsFallback = () => (
   <section
+    id="projects"
     aria-hidden="true"
     className="border-t border-slate-200 bg-slate-50 py-20 sm:py-24"
   >

@@ -9,7 +9,7 @@ export default function Experience() {
     <section
       id="experience"
       aria-labelledby="experience-heading"
-      className="scroll-mt-24 border-t border-slate-200 bg-slate-50 py-20 sm:py-24"
+      className="border-t border-slate-200 bg-slate-50 py-20 sm:py-24"
     >
       <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16 lg:px-8">
         <div>
@@ -42,8 +42,9 @@ export default function Experience() {
           </h3>
           <p className="mt-2 leading-relaxed text-slate-600">
             I build projects with React, TypeScript, Next.js, Tailwind CSS, and
-            Django. Each project starts with a real use case and ends with a
-            live demo and public source code.
+            Django. The selected projects above each include a live demo and
+            public source code, so you can inspect both the result and the
+            implementation.
           </p>
 
           <ul className="mt-6 flex flex-wrap gap-2">

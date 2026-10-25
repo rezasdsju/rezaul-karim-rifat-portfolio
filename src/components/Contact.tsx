@@ -27,7 +27,7 @@ export default function Contact() {
     <section
       id="contact"
       aria-labelledby="contact-heading"
-      className="scroll-mt-24 border-t border-slate-800 bg-slate-900 py-20 text-white sm:py-24"
+      className="border-t border-slate-800 bg-slate-900 py-20 text-white sm:py-24"
     >
       <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:px-8">
         <div>

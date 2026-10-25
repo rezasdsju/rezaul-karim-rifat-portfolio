@@ -15,22 +15,28 @@ export default function Nav() {
   const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
-    const sections = navLinks
-      .map((link) => document.getElementById(link.id))
-      .filter((section): section is HTMLElement => section !== null);
+    const updateActiveSection = () => {
+      const scrollPosition = window.scrollY + 96;
+      let currentSection = "home";
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visibleSection = entries.find((entry) => entry.isIntersecting);
-        if (visibleSection) {
-          setActiveSection(visibleSection.target.id);
+      navLinks.forEach(({ id }) => {
+        const section = document.getElementById(id);
+        if (section && section.offsetTop <= scrollPosition) {
+          currentSection = id;
         }
-      },
-      { rootMargin: "-40% 0px -55% 0px" },
-    );
+      });
 
-    sections.forEach((section) => observer.observe(section));
-    return () => observer.disconnect();
+      setActiveSection(currentSection);
+    };
+
+    updateActiveSection();
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("resize", updateActiveSection);
+
+    return () => {
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("resize", updateActiveSection);
+    };
   }, []);
 
   const closeMenu = () => setIsMenuOpen(false);

@@ -1,6 +1,7 @@
 export interface ProjectDataType {
   id: string;
   imageUrl: string;
+  imageSrcSet?: string;
   title: string;
   description: string;
   framework: string;

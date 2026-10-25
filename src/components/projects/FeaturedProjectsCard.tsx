@@ -18,6 +18,8 @@ export default function FeaturedProjectsCard({ project }: FeaturedProjectsCardPr
                     <div className="aspect-video overflow-hidden rounded-xl border border-slate-200 bg-white">
                         <img
                             src={project.imageUrl}
+                            srcSet={project.imageSrcSet}
+                            sizes="(min-width: 768px) 332px, (min-width: 640px) calc(100vw - 96px), calc(100vw - 64px)"
                             alt={`${project.title} screenshot`}
                             width={1200}
                             height={675}

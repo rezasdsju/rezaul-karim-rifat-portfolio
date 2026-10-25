@@ -2,6 +2,8 @@ import { FaDownload } from "react-icons/fa";
 import { FaGithub, FaLinkedin, FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import BannerImage from "../assets/me-0.jpg";
+import BannerImageLarge from "../assets/me-0-800.webp";
+import BannerImageSmall from "../assets/me-0-480.webp";
 
 const contactLinks = [
   {
@@ -23,7 +25,7 @@ const contactLinks = [
 
 export default function Banner() {
   return (
-    <section id="home" aria-labelledby="hero-heading" className="scroll-mt-24 bg-white">
+    <section id="home" aria-labelledby="hero-heading" className="bg-white">
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16 lg:px-8 lg:py-24">
         <div>
           <p className="text-sm font-semibold uppercase tracking-widest text-blue-700">
@@ -89,10 +91,13 @@ export default function Banner() {
           <div className="rounded-3xl border border-slate-200 bg-slate-100 p-2 shadow-sm">
             <img
               src={BannerImage}
+              srcSet={`${BannerImageSmall} 480w, ${BannerImageLarge} 800w`}
+              sizes="(min-width: 480px) 384px, calc(100vw - 32px)"
               alt="Rezaul Karim Rifat"
               width={800}
               height={1067}
               loading="eager"
+              fetchPriority="high"
               decoding="async"
               className="aspect-[3/4] w-full rounded-2xl object-cover"
             />

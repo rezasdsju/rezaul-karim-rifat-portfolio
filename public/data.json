@@ -2,6 +2,7 @@
   {
     "id": "1",
     "imageUrl": "/projects/bazar-sodai.jpg",
+    "imageSrcSet": "/projects/bazar-sodai-640.webp 640w, /projects/bazar-sodai-768.webp 768w, /projects/bazar-sodai-960.webp 960w",
     "title": "Bazar-Sodai",
     "description": "An online grocery e-commerce platform.",
     "framework": "React",
@@ -23,6 +24,7 @@
   {
     "id": "3",
     "imageUrl": "/projects/bazar-dor.jpg",
+    "imageSrcSet": "/projects/bazar-dor-640.webp 640w, /projects/bazar-dor-768.webp 768w, /projects/bazar-dor-960.webp 960w",
     "title": "Bazar-Dor",
     "description": "A price-tracking application for essential products.",
     "framework": "Next.js",
@@ -45,6 +47,7 @@
   {
     "id": "5",
     "imageUrl": "/projects/fit-log.jpg",
+    "imageSrcSet": "/projects/fit-log-640.webp 640w, /projects/fit-log-768.webp 768w, /projects/fit-log-960.webp 960w",
     "title": "Fit-Log",
     "description": "A responsive workout tracking app for exploring workouts, planning routines, and saving favorites.",
     "framework": "Next.js",
@@ -67,6 +70,7 @@
   {
     "id": "4",
     "imageUrl": "/projects/bnews.jpg",
+    "imageSrcSet": "/projects/bnews-640.webp 640w, /projects/bnews-768.webp 768w, /projects/bnews-960.webp 960w",
     "title": "Bangla News 24",
     "description": "A news portal for browsing categorized stories and reading full articles.",
     "framework": "Next.js",
@@ -89,6 +93,7 @@
   {
     "id": "2",
     "imageUrl": "/projects/blog.jpg",
+    "imageSrcSet": "/projects/blog-640.webp 640w, /projects/blog-768.webp 768w, /projects/blog-960.webp 960w",
     "title": "Django Blog App",
     "description": "A Django blog application with posts, reactions, and comments.",
     "framework": "Django",

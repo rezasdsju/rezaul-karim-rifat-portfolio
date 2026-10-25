@@ -25,7 +25,7 @@ export default function About() {
     <section
       id="about"
       aria-labelledby="about-heading"
-      className="scroll-mt-24 border-t border-slate-200 bg-white py-20 sm:py-24"
+      className="border-t border-slate-200 bg-white py-20 sm:py-24"
     >
       <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:px-8">
         <div>
@@ -97,7 +97,7 @@ export default function About() {
           <section
             id="skills"
             aria-labelledby="skills-heading"
-            className="scroll-mt-24 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8"
+            className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8"
           >
             <h3 id="skills-heading" className="text-lg font-bold text-slate-900">
               Skills
