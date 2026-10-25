@@ -1,39 +1,104 @@
-import BannarImage from '../assets/me-0.jpeg'
+import { FaDownload } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaLocationDot } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
+import BannerImage from "../assets/me-0.jpeg";
+
+const contactLinks = [
+  {
+    label: "GitHub",
+    href: "https://github.com/rezasdsju",
+    icon: FaGithub,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/rezaul-karim-rifat-833154370/",
+    icon: FaLinkedin,
+  },
+  {
+    label: "Email",
+    href: "mailto:rezaul2002104@gmail.com",
+    icon: MdEmail,
+  },
+];
+
 export default function Banner() {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 my-5 md:my-9'>
-        <div className='space-y-2 mx-auto px-3 md:px-10'>
-            <h2 className='font-semibold text-2xl'>Hello, I am</h2>
-            <h1 className='text-3xl md:text-5xl font-bold text-blue-900 '>Rezaul Karim Rifat</h1>
-            <h2 className='bg-linear-to-r from-orange-900 to-purple-600 bg-clip-text text-transparent text-2xl font-semibold'>Full Stack Web Developer</h2>
-            <p>I build modern and responsive web applications using Python, Django,React and Related Technologies. I love turning ideas into real products</p>
-            <div className='flex items-center gap-5 md:gap-8 py-4'>
-                <button onClick={()=>document.getElementById('projects')?.scrollIntoView()} className="btn btn-active btn-primary">View My Projects</button>
-                <button onClick={()=>document.getElementById('contact')?.scrollIntoView()} className="btn btn-outline">Contact Me</button>
-            </div>
+    <section id="home" aria-labelledby="hero-heading" className="scroll-mt-24 bg-white">
+      <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16 lg:px-8 lg:py-24">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-widest text-blue-700">
+            Full Stack Developer
+          </p>
+
+          <h1
+            id="hero-heading"
+            className="mt-3 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl"
+          >
+            Rezaul Karim Rifat
+          </h1>
+
+          <p className="mt-5 max-w-2xl text-xl leading-relaxed text-slate-700">
+            I build responsive web applications with React, TypeScript, and
+            Django — from clean interfaces to the APIs behind them.
+          </p>
+
+          <p className="mt-5 inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1 text-sm font-medium text-blue-700">
+            <span aria-hidden="true" className="h-2 w-2 rounded-full bg-blue-700" />
+            Open to full-stack and frontend opportunities
+          </p>
+
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <a
+              href="#projects"
+              className="inline-flex items-center gap-2 rounded-lg bg-blue-700 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2"
+            >
+              View projects
+              <span aria-hidden="true">→</span>
+            </a>
+            <a
+              href="/resume.pdf"
+              download
+              className="inline-flex items-center gap-2 rounded-lg border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-700 transition-colors hover:border-slate-400 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2"
+            >
+              Download CV
+              <FaDownload aria-hidden="true" className="text-xs" />
+            </a>
+          </div>
+
+          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+            {contactLinks.map(({ label, href, icon: Icon }) => (
+              <a
+                key={label}
+                href={href}
+                target={href.startsWith("mailto:") ? undefined : "_blank"}
+                rel={href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
+                className="inline-flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-4"
+              >
+                <Icon aria-hidden="true" className="text-base" />
+                {label}
+              </a>
+            ))}
+            <span className="inline-flex items-center gap-2 text-sm text-slate-500">
+              <FaLocationDot aria-hidden="true" className="text-base" />
+              Dhaka, Bangladesh
+            </span>
+          </div>
         </div>
-<div className="relative flex justify-center items-center overflow-hidden min-h-72
-  bg-white
-  before:absolute before:inset-0
-  before:bg-[radial-gradient(ellipse_at_right,#ede9fe_0%,#eff6ff_35%,#ffffff_75%)]">
 
-  {/* Decorative circles */}
-  <div className="absolute -top-10 -right-10 h-40 w-40 rounded-full bg-blue-200/40 blur-2xl"></div>
-
-  <div className="absolute -bottom-10 -left-10 h-40 w-40 rounded-full bg-purple-200/40 blur-2xl"></div>
-
-  {/* Image */}
-  <div className="relative z-10">
-    <div className="absolute inset-0 rounded-full bg-linear-to-br from-blue-400 via-purple-400 to-orange-300 blur-xl opacity-40"></div>
-
-    <img
-      src={BannarImage}
-      alt="Rezaul Karim Rifat"
-      className="relative h-60 w-60 object-cover rounded-full border-4 border-white shadow-xl"
-    />
-  </div>
-
-</div>
-    </div>
-  )
+        <div className="mx-auto w-full max-w-sm">
+          <div className="rounded-3xl border border-slate-200 bg-slate-100 p-2 shadow-sm">
+            <img
+              src={BannerImage}
+              alt="Rezaul Karim Rifat"
+              width={600}
+              height={750}
+              loading="eager"
+              decoding="async"
+              className="aspect-[4/5] w-full rounded-2xl object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }

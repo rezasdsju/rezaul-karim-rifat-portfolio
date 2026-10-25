@@ -1,97 +1,135 @@
-
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaDownload } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi";
 
+const navLinks = [
+  { id: "home", label: "Home" },
+  { id: "projects", label: "Projects" },
+  { id: "about", label: "About" },
+  { id: "contact", label: "Contact" },
+];
+
 export default function Nav() {
-  const [isHamburgerClicked, setIsHamburgerClicked] = useState<boolean>(false)
-  const handleHamburgerClick = ()=>{
-    setIsHamburgerClicked(!isHamburgerClicked)
-  }
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+
+  useEffect(() => {
+    const sections = navLinks
+      .map((link) => document.getElementById(link.id))
+      .filter((section): section is HTMLElement => section !== null);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleSection = entries.find((entry) => entry.isIntersecting);
+        if (visibleSection) {
+          setActiveSection(visibleSection.target.id);
+        }
+      },
+      { rootMargin: "-40% 0px -55% 0px" },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
+
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
-    <div className="sticky top-0 z-50 ">
-
-    <nav className="bg-white/95 backdrop-blur-md flex sm:grid grid-cols-3 mx-auto py-3 shadow-sm border-b border-slate-100">
-
-      <h1 className={`flex items-center ml-3 font-extrabold text-2xl tracking-tight mx-auto text-center sm:pl-8 `}>
-        <span className="text-[#157AD5]">R</span>
-        <span className="text-[#32042f]">K</span>
-        <span className="text-[#5559F7]">R</span>
-      </h1>
-
-      <ul className={`hidden sm:flex items-center justify-center gap-5 text-slate-700 font-medium text-sm `}>
-        <li onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })
-            } className="cursor-pointer hover:text-[#157AD5] transition-colors duration-200">
-          Home
-        </li>
-        <li onClick={()=>document.getElementById('about')?.scrollIntoView()} className="cursor-pointer hover:text-[#157AD5] transition-colors duration-200">
-          About
-        </li>
-        <li onClick={()=>document.getElementById('projects')?.scrollIntoView()} className="cursor-pointer hover:text-[#157AD5] transition-colors duration-200">
-          Projects
-        </li>
-        <li onClick={() => document.getElementById('skill')?.scrollIntoView()} className="cursor-pointer hover:text-[#157AD5] transition-colors duration-200">
-          Skills
-        </li>
-        <li onClick={()=>document.getElementById('experience')?.scrollIntoView()} className="cursor-pointer hover:text-[#157AD5] transition-colors duration-200">
-          Experience
-        </li>
-        <li onClick={()=>document.getElementById('contact')?.scrollIntoView()} className="cursor-pointer hover:text-[#157AD5] transition-colors duration-200">
-          Contact
-        </li>
-      </ul>
-
-      <div className="mx-auto flex items-center">
-        <a href="/ressume.pdf" download className="hidden md:flex bg-slate-900 hover:bg-[#157AD5] text-white font-semibold px-4 py-2 items-center rounded-xl gap-2 transition-all duration-300 shadow-sm hover:shadow-md">
-          Download CV
-          <FaDownload className="text-sm" />
+    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <a
+          href="#home"
+          onClick={closeMenu}
+          className="text-base font-bold tracking-tight text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2"
+        >
+          Rezaul Karim Rifat
         </a>
+
+        <nav aria-label="Main navigation" className="hidden items-center gap-8 md:flex">
+          <ul className="flex items-center gap-7">
+            {navLinks.map((link) => {
+              const isActive = activeSection === link.id;
+              return (
+                <li key={link.id}>
+                  <a
+                    href={`#${link.id}`}
+                    aria-current={isActive ? "location" : undefined}
+                    className={`text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-4 ${
+                      isActive ? "text-blue-700" : "text-slate-600 hover:text-slate-900"
+                    }`}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+
+          <a
+            href="/resume.pdf"
+            download
+            className="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-slate-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
+          >
+            Resume
+            <FaDownload aria-hidden="true" className="text-xs" />
+          </a>
+        </nav>
+
+        <button
+          type="button"
+          onClick={() => setIsMenuOpen((isOpen) => !isOpen)}
+          aria-expanded={isMenuOpen}
+          aria-controls="mobile-menu"
+          aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-slate-700 transition-colors hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 md:hidden"
+        >
+          {isMenuOpen ? (
+            <FaXmark aria-hidden="true" className="text-xl" />
+          ) : (
+            <GiHamburgerMenu aria-hidden="true" className="text-xl" />
+          )}
+        </button>
       </div>
 
-      <span onClick={handleHamburgerClick} className="flex justify-end items-center text-slate-800 pr-3 sm:hidden cursor-pointer">
-        {!isHamburgerClicked?<GiHamburgerMenu className="text-xl" />:<FaXmark className="text-xl"/>}
-
-      </span>
-
-    </nav>
-    <div className={`  ${isHamburgerClicked?'flex flex-col  items-center bg-lime-100 py-2':'hidden'}`}>
-      <ul className="font-bold text-[#157AD5]">
-        <li onClick={()=>{
-          window.scrollTo({top:0, behavior:'smooth'})
-          setIsHamburgerClicked(!isHamburgerClicked)}} className="cursor-pointer  hover:text-[#157AD5] transition-colors duration-200">
-          Home
-        </li>
-        <li onClick={()=>{
-          document.getElementById('about')?.scrollIntoView();
-          setIsHamburgerClicked(!isHamburgerClicked)
-          }} className="cursor-pointer hover:text-[#157AD5] transition-colors duration-200">
-          About
-        </li>
-        <li onClick={()=>{
-          document.getElementById('projects')?.scrollIntoView();
-          
-          setIsHamburgerClicked(!isHamburgerClicked)}} className="cursor-pointer hover:text-[#157AD5] transition-colors duration-200">
-          Projects
-        </li>
-        <li onClick={() => {
-          document.getElementById('skill')?.scrollIntoView();
-          setIsHamburgerClicked(!isHamburgerClicked)}} className="cursor-pointer hover:text-[#157AD5] transition-colors duration-200">
-          Skills
-        </li>
-        <li onClick={()=>{
-          document.getElementById('experience')?.scrollIntoView()
-          setIsHamburgerClicked(!isHamburgerClicked)}} className="cursor-pointer hover:text-[#157AD5] transition-colors duration-200">
-          Experience
-        </li>
-        <li onClick={()=>{
-          document.getElementById('contact')?.scrollIntoView()
-          setIsHamburgerClicked(!isHamburgerClicked)}} className="cursor-pointer hover:text-[#157AD5] transition-colors duration-200">
-          Contact
-        </li>
-      </ul>
-    </div>
-          </div>
-
+      <div
+        id="mobile-menu"
+        className={`border-t border-slate-200 bg-white md:hidden ${
+          isMenuOpen ? "block" : "hidden"
+        }`}
+      >
+        <nav aria-label="Mobile navigation" className="mx-auto max-w-6xl px-4 py-4 sm:px-6">
+          <ul className="space-y-1">
+            {navLinks.map((link) => (
+              <li key={link.id}>
+                <a
+                  href={`#${link.id}`}
+                  onClick={closeMenu}
+                  aria-current={activeSection === link.id ? "location" : undefined}
+                  className={`block rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
+                    activeSection === link.id
+                      ? "bg-blue-50 text-blue-700"
+                      : "text-slate-600 hover:bg-slate-50 hover:text-slate-900"
+                  }`}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+            <li className="pt-2">
+              <a
+                href="/resume.pdf"
+                download
+                onClick={closeMenu}
+                className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-slate-700"
+              >
+                Download resume
+                <FaDownload aria-hidden="true" className="text-xs" />
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
   );
 }
