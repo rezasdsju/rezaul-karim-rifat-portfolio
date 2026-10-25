@@ -15,18 +15,24 @@ Run `npm run lint` and `npm run build` before finishing; there are no unit or in
 
 ## Architecture and data flow
 
-- Entry is `src/main.tsx` → `src/App.tsx`. Sections render in order: Nav, Banner, About (contains the Skills block), Projects, Experience, Contact, Footer.
-- Navigation is plain `getElementById(...).scrollIntoView()`, not a router. Section IDs must stay in sync across `Nav.tsx`, `Footer.tsx`, `Banner.tsx`, and section components: `about`, `skill` (not "skills"), `projects`, `experience`, `contact`. Sticky-nav offset relies on `scroll-mt-20` classes.
-- Projects are driven by `public/data.json`, typed by `src/types/projectDataTypes.ts`. `App.tsx` fetches it at module scope and passes the promise to `Projects`, which reads it with React 19's `use()`; there are no loading/error states.
-- `public/data.json` is the source of truth for projects (13 entries; the README's 6-project list is stale). Project images live in `public/` and are referenced as root paths like `/blog.png`.
-- The projects grid shows only `rating === 5` entries until "View All Projects" is toggled, so a new lower-rated project will not appear in the default view.
-- The contact form is UI only — no submit handler or backend.
+- Entry is `src/main.tsx` → `src/App.tsx`. Sections render in order: Nav, Banner, Projects, About, Experience, Contact, Footer.
+- Navigation uses anchor links (`#home`, `#projects`, `#about`, `#contact`) with `scroll-padding-top` in `src/index.css`; keep those IDs on the matching sections. `#skills` and `#experience` also exist as anchors but are not in the top nav.
+- Projects are driven by `public/data.json`, typed by `src/types/projectDataTypes.ts`. `App.tsx` fetches it at module scope, `Projects.tsx` reads the promise with React 19's `use()`, and `App.tsx` wraps the section in `Suspense`.
+- Only entries with `"featured": true` render (currently five). Other entries remain in the JSON as an archive. To add a project, set `featured: true` and fill `problem`, `role`, `technologies`, `outcome`, and `process`.
+- Project screenshots are optimized JPEGs in `public/projects/`; the hero image is `src/assets/me-0.jpg`. Add `loading="lazy"` and intrinsic dimensions to below-fold images.
+- The contact section is a direct `mailto:`/social-link CTA — there is no form or backend.
 
 ## Styling
 
 - Tailwind 4 is CSS-first: `src/index.css` contains `@import "tailwindcss";` and `@plugin "daisyui";`, wired through `@tailwindcss/vite` in `vite.config.ts`. There is no `tailwind.config.js`; do not add one.
-- daisyUI supplies classes such as `btn`, `btn-primary`, and `btn-outline`. Theme is set via `data-theme="light"` in `index.html`.
+- The visual system is intentionally small: white/slate surfaces, blue-700 accent, one card style, `max-w-6xl` containers. Reuse the existing utility patterns rather than adding new accent colors or gradients.
+- daisyUI supplies classes such as `btn`; the theme is set via `data-theme="light"` in `index.html`.
 - No path alias is configured; use relative imports.
+
+## SEO and metadata
+
+- `index.html` contains the title, description, canonical URL, Open Graph/Twitter tags, and JSON-LD. The canonical and absolute OG URLs currently point to `https://developer-portfolio-sooty-phi.vercel.app/`; update them, `public/sitemap.xml`, and `public/robots.txt` if the domain changes.
+- `public/og-image.jpg` is the social preview; `public/favicon.png` and `public/apple-touch-icon.png` are the icons.
 
 ## TypeScript constraints
 
