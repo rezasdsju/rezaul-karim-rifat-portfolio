@@ -1,7 +1,7 @@
 import { FaDownload } from "react-icons/fa";
 import { FaGithub, FaLinkedin, FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
-import BannerImage from "../assets/me-0.jpeg";
+import BannerImage from "../assets/me-0.jpg";
 
 const contactLinks = [
   {
@@ -90,11 +90,11 @@ export default function Banner() {
             <img
               src={BannerImage}
               alt="Rezaul Karim Rifat"
-              width={600}
-              height={750}
+              width={800}
+              height={1067}
               loading="eager"
               decoding="async"
-              className="aspect-[4/5] w-full rounded-2xl object-cover"
+              className="aspect-[3/4] w-full rounded-2xl object-cover"
             />
           </div>
         </div>

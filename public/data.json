@@ -1,7 +1,7 @@
 [
   {
     "id": "1",
-    "imageUrl": "/bazar-sodaihomepage.png",
+    "imageUrl": "/projects/bazar-sodai.jpg",
     "title": "Bazar-Sodai",
     "description": "An online grocery e-commerce platform.",
     "framework": "React",
@@ -22,7 +22,7 @@
   },
   {
     "id": "3",
-    "imageUrl": "/bazar-dor-1.png",
+    "imageUrl": "/projects/bazar-dor.jpg",
     "title": "Bazar-Dor",
     "description": "A price-tracking application for essential products.",
     "framework": "Next.js",
@@ -44,7 +44,7 @@
   },
   {
     "id": "5",
-    "imageUrl": "/fit-log.png",
+    "imageUrl": "/projects/fit-log.jpg",
     "title": "Fit-Log",
     "description": "A responsive workout tracking app for exploring workouts, planning routines, and saving favorites.",
     "framework": "Next.js",
@@ -66,7 +66,7 @@
   },
   {
     "id": "4",
-    "imageUrl": "/bnews-1.png",
+    "imageUrl": "/projects/bnews.jpg",
     "title": "Bangla News 24",
     "description": "A news portal for browsing categorized stories and reading full articles.",
     "framework": "Next.js",
@@ -88,7 +88,7 @@
   },
   {
     "id": "2",
-    "imageUrl": "/blog.png",
+    "imageUrl": "/projects/blog.jpg",
     "title": "Django Blog App",
     "description": "A Django blog application with posts, reactions, and comments.",
     "framework": "Django",
