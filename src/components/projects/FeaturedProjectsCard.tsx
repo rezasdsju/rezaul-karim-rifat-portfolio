@@ -59,12 +59,14 @@ export default function FeaturedProjectsCard({ project }: FeaturedProjectsCardPr
                                 {project.problem ?? project.description}
                             </dd>
                         </div>
-                        <div>
-                            <dt className="font-semibold text-slate-900">Outcome</dt>
-                            <dd className="mt-1 leading-relaxed text-slate-600">
-                                {project.outcome ?? "[ADD A RESULT OR LESSON LEARNED]"}
-                            </dd>
-                        </div>
+                        {project.outcome && (
+                            <div>
+                                <dt className="font-semibold text-slate-900">Outcome</dt>
+                                <dd className="mt-1 leading-relaxed text-slate-600">
+                                    {project.outcome}
+                                </dd>
+                            </div>
+                        )}
                     </dl>
 
                     {project.process && project.process.length > 0 && (

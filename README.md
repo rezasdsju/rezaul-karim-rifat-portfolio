@@ -50,7 +50,7 @@ There is no test suite. `npm run lint` and `npm run build` are the verification 
 - The hero image is `src/assets/me-0.jpg`.
 - Lower-rated or older entries remain in `data.json` as an archive but are not shown.
 
-Some case-study fields still contain `[ADD ...]` placeholders. Replace them with real details before publishing; do not invent metrics or roles.
+Project process notes describe implementation details taken from the actual repositories. If you change a project, update its `process` entries to match what the code does; do not add metrics or outcomes you cannot verify.
 
 ## Project structure
 

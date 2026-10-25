@@ -18,7 +18,7 @@
     "outcome": "Learned how to connect a React frontend to a Django REST API and carry data through the full stack.",
     "process": [
       "Kept the React client separate from the Django REST API.",
-      "[ADD ONE DESIGN DECISION OR ITERATION]"
+      "Wrapped order creation in a single transaction and recalculated line totals from database prices, so the client cannot submit its own prices."
     ]
   },
   {
@@ -41,7 +41,7 @@
     "process": [
       "Used Next.js for the interface and MongoDB for product data.",
       "Added Better Auth for authentication.",
-      "[ADD ONE DESIGN DECISION OR ITERATION]"
+      "Marked the homepage product sections with Next.js 'use cache' and derived min, max, and average prices on the detail page from the raw market rows."
     ]
   },
   {
@@ -64,7 +64,7 @@
     "process": [
       "Built the interface with Next.js and TypeScript.",
       "Split browsing, details, and saved plans into reusable components.",
-      "[ADD ONE DESIGN DECISION OR ITERATION]"
+      "Moved today's plan, saved workouts, and completed IDs into one React context shared by the library, detail, and plan views."
     ]
   },
   {
@@ -87,7 +87,7 @@
     "process": [
       "Built category-based news browsing with Next.js.",
       "Added article detail views for full stories.",
-      "[ADD ONE DESIGN DECISION OR ITERATION]"
+      "Rendered the API's mixed article body as typed text, subheading, and image blocks instead of flattening it to plain text."
     ]
   },
   {
@@ -109,7 +109,7 @@
     "outcome": "Learned how to implement post CRUD, reactions, and comments with Django models and views.",
     "process": [
       "Modelled posts, comments, and reactions in Django.",
-      "[ADD ONE DESIGN DECISION OR ITERATION]"
+      "Generated each slug from the title plus a UUID so duplicate titles still get unique, shareable URLs."
     ]
   },
   {
