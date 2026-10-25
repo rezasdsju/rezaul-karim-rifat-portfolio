@@ -1,94 +1,129 @@
+const skillGroups = [
+  {
+    title: "Frontend",
+    skills: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "HTML", "CSS"],
+  },
+  {
+    title: "Backend & data",
+    skills: ["Python", "Django", "Django REST Framework", "REST APIs", "MongoDB"],
+  },
+  {
+    title: "Tools",
+    skills: ["Git", "GitHub", "Vite", "Better Auth", "Bootstrap"],
+  },
+];
 
-// import AboutImage from '../assets/laptop-2.jfif'
-import PythonImage from '../assets/python.png'
-import DjangoImage from '../assets/django.png'
-import JSIMage from '../assets/js.png'
-import ReactImage from '../assets/react.jfif'
-import TypeScriptImage from '../assets/ts.png'
-import NextjsLogo from '../assets/next-js-logo.png'
-// import { FaGraduationCap } from 'react-icons/fa'
-import GraduationCap from '../assets/graduation-cap.jfif'
-import Map from '../assets/map-2.jfif'
-import Experience from '../assets/experience.jfif'
-import TailwindImage from '../assets/tailwind.png'
-// import { FaPython } from "react-icons/fa";
+const quickFacts = [
+  { label: "Location", value: "Dhaka, Bangladesh" },
+  { label: "Education", value: "Jahangirnagar University" },
+  { label: "Focus", value: "Full-stack web development" },
+  { label: "Currently", value: "Building with React, TypeScript, Next.js, and Django" },
+];
 
 export default function About() {
-    return (
-        <div className='grid grid-cols-1 sm:grid-cols-2 my-6 sm:mt-15 bg-linear-to-br from-blue-50 via-purple-50 to-orange-50 py-4 sm:py-8 '>
-            <div className='px-5 sm:px-10'>
-                <h2 className='text-blue-700 text-3xl font-bold scroll-mt-20' id='about'>About Me</h2>
-                <h2 className='bg-linear-to-r from-orange-900 to-purple-600 bg-clip-text text-transparent text-2xl font-semibold'>Who I Am</h2>
-                <p>I am Rezaul Karim Rifat, a passionate and dedicated web developer. I enjoy building web applications and solving real world problems with technology</p>
+  return (
+    <section
+      id="about"
+      aria-labelledby="about-heading"
+      className="scroll-mt-24 border-t border-slate-200 bg-white py-20 sm:py-24"
+    >
+      <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:px-8">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-widest text-blue-700">
+            About
+          </p>
+          <h2
+            id="about-heading"
+            className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"
+          >
+            A developer who cares about the details
+          </h2>
 
-                <p className='pt-2'>I'm currently focusing on improving my skills and building meaningfull projects. I aim to become a professional full stack developer and contribute to impactfull products in the future</p>
+          <div className="mt-6 space-y-4 text-base leading-relaxed text-slate-600">
+            <p>
+              I'm Rezaul Karim Rifat, a full-stack web developer based in Dhaka,
+              Bangladesh. I enjoy turning ideas into responsive, usable products
+              — from the first layout to the API behind it.
+            </p>
+            <p>
+              I work mainly with React, TypeScript, Next.js, and Tailwind CSS on
+              the frontend, and Python and Django on the backend. My projects
+              span e-commerce, news, fitness, and blogging, which has taught me
+              how to connect interfaces to real data and ship complete flows.
+            </p>
+            <p>
+              Alongside university, I've been building projects consistently
+              since 2025. I'm looking for a team where I can contribute to real
+              products, learn from code reviews, and grow as a full-stack
+              developer.
+            </p>
+          </div>
 
-                <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 mt-5'>
-                    <div className='bg-lime-950 flex items-center gap-4 px-4 py-2 rounded-2xl'>
-                        <img src={GraduationCap} alt="" className='h-10 w-10 rounded-full' />
-                        <div>
-                            <p className='font-bold text-white'>Education</p>
-                            <p className='text-red-200'>Jahangirnagar University </p>
-                        </div>
-                    </div>
-                    <div className='bg-lime-500 flex items-center gap-4 px-4 py-2 rounded-2xl'>
-                        <img src={Map} alt="" className='h-10 w-10 rounded-full' />
-                        <div>
-                            <p className='font-bold'>Location</p>
-                            <p className='text-yellow-950'>Dhaka, Bangladesh</p>
-                        </div>
-                    </div>
-
-                    <div className='bg-amber-900 flex items-center gap-4 px-4 py-2 rounded-2xl'>
-                        <img src={Experience} alt="" className='h-10 w-10 rounded-full' />
-                        <div>
-                            <p className='font-bold text-white'>Experience</p>
-                            <p className='text-purple-300'> One Years</p>
-                        </div>
-                    </div>
- 
-                </div>
-            </div>
-            <div className='mt-4 sm:mt-0'>
-                {/* <img src={AboutImage} alt="" className='h-70 w-full' /> */}
-                <div className='ml-5 sm:ml-0 mb-4'>
-                    <h2 className='text-2xl font-semibold text-lime-700 scroll-mt-20' id='skill'>My Skills</h2>
-                    <h1 className='text-3xl font-bold'>Technologies and Tools</h1>
-                    <p>Here are the technologies and tools I've worked so far</p>
-                </div>
-
-                <div className="grid grid-cols-3 gap-5">
-                    <div className='flex flex-col items-center '>
-                        <img src={PythonImage} alt="" className='h-20' />
-                        <h3>Python</h3>
-                    </div>
-                    <div className='flex flex-col items-center '>
-                        <img src={DjangoImage} alt="" className='h-20' />
-                        <h3>Django</h3>
-                    </div>
-                    <div className='flex flex-col items-center '>
-                        <img src={JSIMage} alt="" className='h-20' />
-                        <h3>JavaScript</h3>
-                    </div>
-                    <div className='flex flex-col items-center '>
-                        <img src={TypeScriptImage} alt="" className='h-20' />
-                        <h3>TypeScript</h3>
-                    </div>
-                    <div className='flex flex-col items-center '>
-                        <img src={ReactImage} alt="" className='h-20' />
-                        <h3>React</h3>
-                    </div>
-                    <div className='flex flex-col items-center '>
-                        <img src={NextjsLogo} alt="" className='h-20' />
-                        <h3>NEXT.js</h3>
-                    </div>
-                    <div className='flex flex-col items-center '>
-                        <img src={TailwindImage} alt="" className='h-20' />
-                        <h3>Tailwind </h3>
-                    </div>
-
-                </div>
-            </div>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a
+              href="/resume.pdf"
+              download
+              className="inline-flex items-center rounded-lg bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-slate-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
+            >
+              Download CV
+            </a>
+            <a
+              href="#contact"
+              className="inline-flex items-center rounded-lg border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-700 transition-colors hover:border-slate-400 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2"
+            >
+              Get in touch
+            </a>
+          </div>
         </div>
-    )
+
+        <div className="space-y-6">
+          <section
+            aria-labelledby="facts-heading"
+            className="rounded-2xl border border-slate-200 bg-slate-50 p-6 sm:p-8"
+          >
+            <h3 id="facts-heading" className="text-lg font-bold text-slate-900">
+              Quick facts
+            </h3>
+            <dl className="mt-5 divide-y divide-slate-200">
+              {quickFacts.map((fact) => (
+                <div key={fact.label} className="grid gap-1 py-3 first:pt-0 last:pb-0 sm:grid-cols-[7rem_1fr] sm:gap-4">
+                  <dt className="text-sm font-medium text-slate-500">{fact.label}</dt>
+                  <dd className="text-sm text-slate-700">{fact.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+
+          <section
+            id="skills"
+            aria-labelledby="skills-heading"
+            className="scroll-mt-24 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8"
+          >
+            <h3 id="skills-heading" className="text-lg font-bold text-slate-900">
+              Skills
+            </h3>
+            <div className="mt-5 space-y-5">
+              {skillGroups.map((group) => (
+                <div key={group.title}>
+                  <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                    {group.title}
+                  </h4>
+                  <ul className="mt-2 flex flex-wrap gap-2">
+                    {group.skills.map((skill) => (
+                      <li
+                        key={skill}
+                        className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-medium text-slate-700"
+                      >
+                        {skill}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  );
 }
