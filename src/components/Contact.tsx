@@ -1,156 +1,110 @@
-
 import { FaGithub, FaLinkedin, FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
+const contactDetails = [
+  {
+    label: "Email",
+    value: "rezaul2002104@gmail.com",
+    href: "mailto:rezaul2002104@gmail.com",
+    icon: MdEmail,
+  },
+  {
+    label: "GitHub",
+    value: "github.com/rezasdsju",
+    href: "https://github.com/rezasdsju",
+    icon: FaGithub,
+  },
+  {
+    label: "LinkedIn",
+    value: "linkedin.com/in/rezaul-karim-rifat",
+    href: "https://www.linkedin.com/in/rezaul-karim-rifat-833154370/",
+    icon: FaLinkedin,
+  },
+];
+
 export default function Contact() {
   return (
-    <div className="scroll-mt-20 my-12 sm:my-16 px-5 sm:px-8 md:px-10" id='contact'>
-
-      {/* Section Header */}
-      <div className="mb-8">
-        <p className="text-[#157AD5] font-semibold text-lg">
-          GET IN TOUCH
-        </p>
-
-        <h1 className="text-3xl sm:text-4xl font-bold text-[#031f37]">
-          Let's Work Together
-        </h1>
-
-        <p className="mt-2 max-w-2xl text-slate-600 leading-relaxed">
-          I am open to opportunities, collaborations and interesting projects.
-          Feel free to reach out.
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-
-        {/* Contact Information */}
-        <div className="rounded-3xl border border-blue-100 bg-linear-to-br from-blue-50 via-indigo-50 to-purple-50 p-6 sm:p-8 shadow-sm">
-
-          <h2 className="text-xl font-bold text-[#031f37] mb-6">
-            Contact Information
+    <section
+      id="contact"
+      aria-labelledby="contact-heading"
+      className="scroll-mt-24 border-t border-slate-800 bg-slate-900 py-20 text-white sm:py-24"
+    >
+      <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:px-8">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-widest text-blue-300">
+            Contact
+          </p>
+          <h2
+            id="contact-heading"
+            className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl"
+          >
+            Let's build something useful
           </h2>
+          <p className="mt-5 max-w-xl leading-relaxed text-slate-300">
+            I'm open to full-stack and frontend opportunities, collaborations,
+            and interesting projects. The fastest way to reach me is email — I'd
+            be glad to hear what you're working on.
+          </p>
 
-          <div className="space-y-5">
-
-            <div className="flex items-center gap-4">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white text-xl text-[#157AD5] shadow-sm">
-                <MdEmail />
-              </span>
-
-              <div>
-                <p className="text-sm text-slate-500">Email</p>
-                <a
-                  href="mailto:rezaul2002104@gmail.com"
-                  className="font-medium text-slate-700 hover:text-[#157AD5] transition-colors"
-                >
-                  rezaul2002104@gmail.com
-                </a>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white text-xl text-[#157AD5] shadow-sm">
-                <FaLocationDot />
-              </span>
-
-              <div>
-                <p className="text-sm text-slate-500">Location</p>
-                <p className="font-medium text-slate-700">
-                  Bangladesh
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white text-xl text-[#031f37] shadow-sm">
-                <FaGithub />
-              </span>
-
-              <div>
-                <p className="text-sm text-slate-500">GitHub</p>
-                <a
-                  href="https://github.com/rezasdsju"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-medium text-slate-700 hover:text-[#157AD5] transition-colors"
-                >
-                  github.com/rezasdsju
-                </a>
-              </div>
-
-            </div>
-
-           <div className="flex items-center gap-4">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white text-xl text-[#031f37] shadow-sm">
-                <FaLinkedin />
-
-              </span>
-
-              <div>
-                <p className="text-sm text-slate-500">Linked In</p>
-                <a
-                  href="https://www.linkedin.com/in/rezaul-karim-rifat-833154370/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-medium text-slate-700 hover:text-[#157AD5] transition-colors"
-                >
-                  linkedin.com/in/rezaul-karim-rifat
-                </a>
-              </div>
-
-            </div>
-            
-
-          </div>
-        </div>
-
-        {/* Contact Form */}
-        <div className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm sm:pb-2" >
-
-          <h2 className="text-xl font-bold text-[#031f37] mb-6">
-            Send Me a Message
-          </h2>
-
-          <div className="space-y-4">
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:border-[#157AD5] focus:ring-2 focus:ring-blue-100 transition"
-              />
-
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:border-[#157AD5] focus:ring-2 focus:ring-blue-100 transition"
-              />
-            </div>
-
-            {/* <input
-              type="text"
-              placeholder="Subject"
-              className="w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:border-[#157AD5] focus:ring-2 focus:ring-blue-100 transition"
-            /> */}
-
-            <textarea
-              placeholder="Your Message"
-              rows={4}
-              className="w-full resize-none rounded-xl border border-slate-200 px-4 py-3 outline-none focus:border-[#157AD5] focus:ring-2 focus:ring-blue-100 transition"
-            />
-
-            <button
-              type="button"
-              className="w-full rounded-xl bg-[#103b7b] px-5 py-3 font-semibold text-white hover:bg-[#157AD5] transition-all duration-300 shadow-sm hover:shadow-md"
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a
+              href="mailto:rezaul2002104@gmail.com?subject=Portfolio%20inquiry"
+              className="inline-flex items-center gap-2 rounded-lg bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition-colors hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
             >
-              Send Message →
-            </button>
-
+              <MdEmail aria-hidden="true" className="text-base" />
+              Send an email
+            </a>
+            <a
+              href="/resume.pdf"
+              download
+              className="inline-flex items-center gap-2 rounded-lg border border-slate-600 px-5 py-3 text-sm font-semibold text-white transition-colors hover:border-slate-400 hover:bg-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+            >
+              Download CV
+            </a>
           </div>
         </div>
 
+        <div className="rounded-2xl border border-slate-700 bg-slate-800/60 p-6 sm:p-8">
+          <h3 className="text-lg font-bold">Contact details</h3>
+          <ul className="mt-5 space-y-4">
+            {contactDetails.map(({ label, value, href, icon: Icon }) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  target={href.startsWith("mailto:") ? undefined : "_blank"}
+                  rel={href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
+                  className="group flex items-start gap-4 rounded-xl p-2 transition-colors hover:bg-slate-700/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                >
+                  <span className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-slate-700 text-lg text-blue-300">
+                    <Icon aria-hidden="true" />
+                  </span>
+                  <span>
+                    <span className="block text-sm font-medium text-slate-400">
+                      {label}
+                    </span>
+                    <span className="block text-sm font-medium text-white group-hover:text-blue-200">
+                      {value}
+                    </span>
+                  </span>
+                </a>
+              </li>
+            ))}
+            <li className="flex items-start gap-4 p-2">
+              <span className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-slate-700 text-lg text-blue-300">
+                <FaLocationDot aria-hidden="true" />
+              </span>
+              <span>
+                <span className="block text-sm font-medium text-slate-400">
+                  Location
+                </span>
+                <span className="block text-sm font-medium text-white">
+                  Dhaka, Bangladesh
+                </span>
+              </span>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
