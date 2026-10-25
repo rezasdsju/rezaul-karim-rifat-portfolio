@@ -5,8 +5,14 @@ export interface ProjectDataType {
   description: string;
   framework: string;
   language: string;
-  additionalTechnology:string
+  additionalTechnology: string;
   rating: number;
-  githubUrl:string,
-  liveUrl: string
+  githubUrl: string;
+  liveUrl: string;
+  featured?: boolean;
+  problem?: string;
+  role?: string;
+  outcome?: string;
+  process?: string[];
+  technologies?: string[];
 }

@@ -3,61 +3,109 @@
     "id": "1",
     "imageUrl": "/bazar-sodaihomepage.png",
     "title": "Bazar-Sodai",
-    "description": "An online grocery e-commerce platform",
+    "description": "An online grocery e-commerce platform.",
     "framework": "React",
     "language": "Python, JavaScript",
     "additionalTechnology": "Django REST Framework",
     "rating": 5,
     "githubUrl": "https://github.com/rezasdsju/ecommerce-project-drf-react.git",
-    "liveUrl": "https://bazar-sodai-frontend-ten.vercel.app/"
-  },
-  {
-    "id": "2",
-    "imageUrl": "/blog.png",
-    "title": "Django Blog App",
-    "description": "A Django-based blog application where users can create, read, edit, like, dislike, and comment on blog posts.",
-    "framework": "Django",
-    "language": "Python",
-    "additionalTechnology": "Bootstrap",
-    "rating": 5,
-    "githubUrl": "https://github.com/rezasdsju/blog_project_django.git",
-    "liveUrl": "https://blog.satbeta.top/"
+    "liveUrl": "https://bazar-sodai-frontend-ten.vercel.app/",
+    "featured": true,
+    "problem": "An online grocery storefront for shoppers who want to browse products and order everyday essentials without visiting a store.",
+    "role": "Developer",
+    "technologies": ["React", "JavaScript", "Python", "Django REST Framework"],
+    "outcome": "Learned how to connect a React frontend to a Django REST API and carry data through the full stack.",
+    "process": [
+      "Kept the React client separate from the Django REST API.",
+      "[ADD ONE DESIGN DECISION OR ITERATION]"
+    ]
   },
   {
     "id": "3",
     "imageUrl": "/bazar-dor-1.png",
     "title": "Bazar-Dor",
-    "description": "A Price tracking application of essential Products",
-    "framework": "Next.js",
-    "language": "Better Auth",
-    "additionalTechnology": "MongoDB",
-    "rating": 5,
-    "githubUrl": "https://github.com/rezasdsju/bazar-dor.git",
-    "liveUrl": "https://bazar-dor-two.vercel.app/"
-  },
-  {
-    "id": "4",
-    "imageUrl": "/bnews-1.png",
-    "title": "Bangla News 24",
-    "description": "A modern demo online news portal that allows users to explore categorized news previews and read detailed news articles.",
+    "description": "A price-tracking application for essential products.",
     "framework": "Next.js",
     "language": "TypeScript",
-    "additionalTechnology": "Better Auth",
+    "additionalTechnology": "MongoDB, Better Auth",
     "rating": 5,
-    "githubUrl": "https://github.com/rezasdsju/bangla-news-24.git",
-    "liveUrl": "https://bangla-news-24-js4q.vercel.app/"
+    "githubUrl": "https://github.com/rezasdsju/bazar-dor.git",
+    "liveUrl": "https://bazar-dor-two.vercel.app/",
+    "featured": true,
+    "problem": "A price-tracking app for shoppers who want to compare the cost of essential products.",
+    "role": "Developer",
+    "technologies": ["Next.js", "TypeScript", "MongoDB", "Better Auth"],
+    "outcome": "Learned how to build a Next.js app with MongoDB for data and Better Auth for authentication.",
+    "process": [
+      "Used Next.js for the interface and MongoDB for product data.",
+      "Added Better Auth for authentication.",
+      "[ADD ONE DESIGN DECISION OR ITERATION]"
+    ]
   },
   {
     "id": "5",
     "imageUrl": "/fit-log.png",
     "title": "Fit-Log",
-    "description": "FitLog is a responsive workout tracking app built with Next.js, React, and TypeScript. Users can explore workouts, view details, create workout plans, and save workouts for later.",
+    "description": "A responsive workout tracking app for exploring workouts, planning routines, and saving favorites.",
     "framework": "Next.js",
     "language": "TypeScript",
     "additionalTechnology": "Tailwind",
     "rating": 5,
     "githubUrl": "https://github.com/rezasdsju/fit-log.git",
-    "liveUrl": "https://fit-log-weld-xi.vercel.app/"
+    "liveUrl": "https://fit-log-weld-xi.vercel.app/",
+    "featured": true,
+    "problem": "A workout tracker for people who want to find workouts, view the details, create a plan, and save routines for later.",
+    "role": "Developer",
+    "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    "outcome": "Learned how to structure reusable React components for browsing, details, and saved workout plans.",
+    "process": [
+      "Built the interface with Next.js and TypeScript.",
+      "Split browsing, details, and saved plans into reusable components.",
+      "[ADD ONE DESIGN DECISION OR ITERATION]"
+    ]
+  },
+  {
+    "id": "4",
+    "imageUrl": "/bnews-1.png",
+    "title": "Bangla News 24",
+    "description": "A news portal for browsing categorized stories and reading full articles.",
+    "framework": "Next.js",
+    "language": "TypeScript",
+    "additionalTechnology": "Better Auth",
+    "rating": 5,
+    "githubUrl": "https://github.com/rezasdsju/bangla-news-24.git",
+    "liveUrl": "https://bangla-news-24-js4q.vercel.app/",
+    "featured": true,
+    "problem": "A news portal for readers who want to browse categorized stories and open full articles.",
+    "role": "Developer",
+    "technologies": ["Next.js", "TypeScript", "Better Auth"],
+    "outcome": "Learned how to build category-based browsing and article detail views in Next.js.",
+    "process": [
+      "Built category-based news browsing with Next.js.",
+      "Added article detail views for full stories.",
+      "[ADD ONE DESIGN DECISION OR ITERATION]"
+    ]
+  },
+  {
+    "id": "2",
+    "imageUrl": "/blog.png",
+    "title": "Django Blog App",
+    "description": "A Django blog application with posts, reactions, and comments.",
+    "framework": "Django",
+    "language": "Python",
+    "additionalTechnology": "Bootstrap",
+    "rating": 5,
+    "githubUrl": "https://github.com/rezasdsju/blog_project_django.git",
+    "liveUrl": "https://blog.satbeta.top/",
+    "featured": true,
+    "problem": "A blogging platform where writers can create and edit posts, and readers can react and comment.",
+    "role": "Developer",
+    "technologies": ["Django", "Python", "Bootstrap"],
+    "outcome": "Learned how to implement post CRUD, reactions, and comments with Django models and views.",
+    "process": [
+      "Modelled posts, comments, and reactions in Django.",
+      "[ADD ONE DESIGN DECISION OR ITERATION]"
+    ]
   },
   {
     "id": "6",
