@@ -2,7 +2,7 @@
 [
   {
     "id": "1",
-    "imageUrl": "/projects/wanderlust-0.png",
+    "imageUrl": "/projects/wanderlust.jpg",
     "imageSrcSet": "/projects/wanderlust-640.webp 640w, /projects/wanderlust-768.webp 768w, /projects/wanderlust-960.webp 960w",
     "title": "Wanderlust",
     "description": "A tour package booking app where users browse destinations and manage bookings, and admins manage packages.",

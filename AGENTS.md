@@ -18,7 +18,7 @@ Run `npm run lint` and `npm run build` before finishing; there are no unit or in
 - Entry is `src/main.tsx` → `src/App.tsx`. Sections render in order: Nav, Banner, Projects, About, Experience, Contact, Footer.
 - Navigation uses anchor links (`#home`, `#projects`, `#about`, `#contact`) with `scroll-padding-top` in `src/index.css`; keep those IDs on the matching sections. `#skills` and `#experience` also exist as anchors but are not in the top nav.
 - Projects are driven by `public/data.json`, typed by `src/types/projectDataTypes.ts`. `App.tsx` fetches it at module scope, `Projects.tsx` reads the promise with React 19's `use()`, and `App.tsx` wraps the section in `Suspense`.
-- Only entries with `"featured": true` render (currently five). Other entries remain in the JSON as an archive. To add a project, set `featured: true` and fill `problem`, `role`, `technologies`, `outcome`, and `process`.
+- Only entries with `"featured": true` render by default (currently six). A "Show all projects" toggle in `Projects.tsx` reveals the full archive from the JSON. To add a project, set `featured: true` and fill `problem`, `role`, `technologies`, `outcome`, and `process`.
 - Project screenshots live in `public/projects/`: each has a JPEG fallback plus 640/768/960 WebP variants. Cards use `imageSrcSet` with `sizes`; add all three WebP widths when adding a project. The hero image is `src/assets/me-0.jpg`.
 - The contact section is a direct `mailto:`/social-link CTA — there is no form or backend.
 
