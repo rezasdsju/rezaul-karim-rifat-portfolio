@@ -1,6 +1,40 @@
+
 [
   {
     "id": "1",
+    "imageUrl": "/projects/wanderlust-0.png",
+    "imageSrcSet": "/projects/wanderlust-640.webp 640w, /projects/wanderlust-768.webp 768w, /projects/wanderlust-960.webp 960w",
+    "title": "Wanderlust",
+    "description": "A tour package booking app where users browse destinations and manage bookings, and admins manage packages.",
+    "framework": "Next.js",
+    "language": "TypeScript, JavaScript",
+    "additionalTechnology": "Express.js, MongoDB",
+    "rating": 5,
+    "githubUrl": "https://github.com/rezasdsju/wanderlust-frontend.git",
+    "liveUrl": "https://wanderlust-frontend-pqrs.vercel.app/",
+    "featured": true,
+    "problem": "A travel platform for people who want to discover tour destinations, filter them by category, country and price, and book a package online.",
+    "role": "Developer",
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Better Auth",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT"
+    ],
+    "outcome": "Learned how to build full CRUD across a Next.js frontend and an Express API, why protected routes matter, and how to verify JWTs between the two apps.",
+    "process": [
+      "Built the Next.js frontend and the Express API as two separate repositories.",
+      "Verified Better Auth JWTs in the Express API using its JWKS endpoint, and limited creating, editing and deleting destinations to admin users.",
+      "Protected the profile, my bookings and destination details pages with a proxy that redirects signed-out users to the sign-in page."
+    ]
+  },
+  {
+    "id": "2",
     "imageUrl": "/projects/bazar-sodai.jpg",
     "imageSrcSet": "/projects/bazar-sodai-640.webp 640w, /projects/bazar-sodai-768.webp 768w, /projects/bazar-sodai-960.webp 960w",
     "title": "Bazar-Sodai",
@@ -14,7 +48,12 @@
     "featured": true,
     "problem": "An online grocery storefront for shoppers who want to browse products and order everyday essentials without visiting a store.",
     "role": "Developer",
-    "technologies": ["React", "JavaScript", "Python", "Django REST Framework"],
+    "technologies": [
+      "React",
+      "JavaScript",
+      "Python",
+      "Django REST Framework"
+    ],
     "outcome": "Learned how to connect a React frontend to a Django REST API and carry data through the full stack.",
     "process": [
       "Kept the React client separate from the Django REST API.",
@@ -36,7 +75,12 @@
     "featured": true,
     "problem": "A price-tracking app for shoppers who want to compare the cost of essential products.",
     "role": "Developer",
-    "technologies": ["Next.js", "TypeScript", "MongoDB", "Better Auth"],
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "MongoDB",
+      "Better Auth"
+    ],
     "outcome": "Learned how to build a Next.js app with MongoDB for data and Better Auth for authentication.",
     "process": [
       "Used Next.js for the interface and MongoDB for product data.",
@@ -45,7 +89,7 @@
     ]
   },
   {
-    "id": "5",
+    "id": "4",
     "imageUrl": "/projects/fit-log.jpg",
     "imageSrcSet": "/projects/fit-log-640.webp 640w, /projects/fit-log-768.webp 768w, /projects/fit-log-960.webp 960w",
     "title": "Fit-Log",
@@ -59,7 +103,12 @@
     "featured": true,
     "problem": "A workout tracker for people who want to find workouts, view the details, create a plan, and save routines for later.",
     "role": "Developer",
-    "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS"
+    ],
     "outcome": "Learned how to structure reusable React components for browsing, details, and saved workout plans.",
     "process": [
       "Built the interface with Next.js and TypeScript.",
@@ -68,7 +117,7 @@
     ]
   },
   {
-    "id": "4",
+    "id": "5",
     "imageUrl": "/projects/bnews.jpg",
     "imageSrcSet": "/projects/bnews-640.webp 640w, /projects/bnews-768.webp 768w, /projects/bnews-960.webp 960w",
     "title": "Bangla News 24",
@@ -82,7 +131,11 @@
     "featured": true,
     "problem": "A news portal for readers who want to browse categorized stories and open full articles.",
     "role": "Developer",
-    "technologies": ["Next.js", "TypeScript", "Better Auth"],
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Better Auth"
+    ],
     "outcome": "Learned how to build category-based browsing and article detail views in Next.js.",
     "process": [
       "Built category-based news browsing with Next.js.",
@@ -91,7 +144,7 @@
     ]
   },
   {
-    "id": "2",
+    "id": "6",
     "imageUrl": "/projects/blog.jpg",
     "imageSrcSet": "/projects/blog-640.webp 640w, /projects/blog-768.webp 768w, /projects/blog-960.webp 960w",
     "title": "Django Blog App",
@@ -105,7 +158,11 @@
     "featured": true,
     "problem": "A blogging platform where writers can create and edit posts, and readers can react and comment.",
     "role": "Developer",
-    "technologies": ["Django", "Python", "Bootstrap"],
+    "technologies": [
+      "Django",
+      "Python",
+      "Bootstrap"
+    ],
     "outcome": "Learned how to implement post CRUD, reactions, and comments with Django models and views.",
     "process": [
       "Modelled posts, comments, and reactions in Django.",
@@ -113,7 +170,7 @@
     ]
   },
   {
-    "id": "6",
+    "id": "7",
     "imageUrl": "/book-vibe.png",
     "title": "Book Vibe",
     "description": " A responsive book management web application that allows users to explore books, view detailed information, manage their Read List and Wish List, sort saved books, and visualize their reading progress.",
@@ -125,7 +182,7 @@
     "liveUrl": "https://book-vibe-b1db.vercel.app/"
   },
   {
-    "id": "7",
+    "id": "8",
     "imageUrl": "/devstack.png",
     "title": "DevStack",
     "description": "A developer-focused web application built with React and TypeScript for exploring development resources and technologies.",
@@ -137,7 +194,7 @@
     "liveUrl": "https://devstack-tawny.vercel.app/"
   },
   {
-    "id": "8",
+    "id": "9",
     "imageUrl": "/bpl-dream.png",
     "title": "BPL Dream Eleven",
     "description": "A cricket team management web application where users can explore players and build their own dream team.",
@@ -149,7 +206,7 @@
     "liveUrl": "https://bpl-dream-eleven-eight.vercel.app/"
   },
   {
-    "id": "9",
+    "id": "10",
     "imageUrl": "/country-image.png",
     "title": "Country Explorer",
     "description": "A country exploration web application where users can explore country information, view details, and mark countries as visited.",
@@ -161,7 +218,7 @@
     "liveUrl": "https://lighthearted-chimera-34f191.netlify.app/"
   },
   {
-    "id": "10",
+    "id": "11",
     "imageUrl": "/natures-platter.png",
     "title": "Nature's Platter",
     "description": "A responsive food website showcasing fresh and healthy food items with a clean and user-friendly interface.",
@@ -173,7 +230,7 @@
     "liveUrl": "https://rezasdsju.github.io/Nature-s-Platter/"
   },
   {
-    "id": "11",
+    "id": "12",
     "imageUrl": "/grocery.png",
     "title": "Grocery Store",
     "description": "A grocery product search application where users can search for products and filter items based on their stock availability.",
@@ -185,7 +242,7 @@
     "liveUrl": "https://search-app-self.vercel.app/"
   },
   {
-    "id": "12",
+    "id": "13",
     "imageUrl": "/tic-tac.png",
     "title": "Tic-Tac-Toe",
     "description": "A classic Tic-Tac-Toe game built with React and TypeScript, allowing two players to play the game and displaying the winner when the game ends.",
@@ -197,7 +254,7 @@
     "liveUrl": "https://tic-tac-toe-game-eta-beige.vercel.app/"
   },
   {
-    "id": "13",
+    "id": "14",
     "imageUrl": "/portfolio.png",
     "title": "Developer Portfolio",
     "description": "A personal developer portfolio website showcasing my skills, projects, and experience.",
