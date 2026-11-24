@@ -7,7 +7,7 @@ interface ProjectsPropsTypes {
     projectsDataPromise: Promise<ProjectDataType[]>
 }
 
-const FEATURED_LIMIT = 6;
+const FEATURED_LIMIT = 7;
 
 export default function Projects({ projectsDataPromise }: ProjectsPropsTypes) {
     const projects = use(projectsDataPromise);
@@ -37,7 +37,7 @@ export default function Projects({ projectsDataPromise }: ProjectsPropsTypes) {
                             Projects that ship
                         </h2>
                         <p className="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">
-                            Six featured builds across full-stack, frontend, and API work.
+                            Seven featured builds across full-stack, frontend, and API work.
                             Every card opens a live demo and its source code.
                         </p>
                     </div>

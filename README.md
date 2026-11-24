@@ -44,7 +44,7 @@ There is no test suite. `npm run lint` and `npm run build` are the verification 
 
 ## Project data
 
-`public/data.json` is the source of truth for project content. Only entries with `"featured": true` are rendered — currently five projects. The matching TypeScript shape lives in `src/types/projectDataTypes.ts`.
+`public/data.json` is the source of truth for project content. Entries marked `"featured": true` appear by default — currently seven projects — and the project section toggle reveals the full archive. The matching TypeScript shape lives in `src/types/projectDataTypes.ts`.
 
 - Project screenshots are optimized JPEGs in `public/projects/`.
 - The hero image is `src/assets/me-0.jpg`.
