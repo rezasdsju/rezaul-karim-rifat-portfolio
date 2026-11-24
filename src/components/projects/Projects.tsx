@@ -7,7 +7,7 @@ interface ProjectsPropsTypes {
     projectsDataPromise: Promise<ProjectDataType[]>
 }
 
-const FEATURED_LIMIT = 8;
+const FEATURED_LIMIT = 5;
 
 export default function Projects({ projectsDataPromise }: ProjectsPropsTypes) {
     const projects = use(projectsDataPromise);
