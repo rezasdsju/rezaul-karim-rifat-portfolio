@@ -33,6 +33,38 @@
   },
   {
     "id": "2",
+    "imageUrl": "/projects/helphive.jfif",
+    "title": "HelpHive",
+    "description": "A volunteer and social impact platform connecting people with local events and opportunities to support their communities.",
+    "framework": "Next.js",
+    "language": "TypeScript",
+    "additionalTechnology": "Better Auth, MongoDB, JWT",
+    "rating": 5,
+    "githubUrl": "https://github.com/rezasdsju/helphive-client",
+    "liveUrl": "https://helphive-community-indol.vercel.app/",
+    "featured": true,
+    "problem": "A community platform where people can discover local volunteer events, participate in opportunities, and manage events they create.",
+    "role": "Developer",
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Better Auth",
+      "MongoDB",
+      "JWT"
+    ],
+    "outcome": "Built public event discovery and authenticated workflows for creating, joining, and managing community events.",
+    "process": [
+      "Created public upcoming-event listings with event details and category filters.",
+      "Used Better Auth for email/password and Google sign-in, and JWTs to authorize protected backend requests.",
+      "Added participation with duplicate-join prevention, plus joined-event and event-management views.",
+      "Disabled fetch caching on event listings and management pages so newly created or updated events appear promptly."
+    ]
+  },
+  {
+    "id": "3",
     "imageUrl": "/projects/wanderlust.jpg",
     "imageSrcSet": "/projects/wanderlust-640.webp 640w, /projects/wanderlust-768.webp 768w, /projects/wanderlust-960.webp 960w",
     "title": "Wanderlust",
@@ -65,7 +97,7 @@
     ]
   },
   {
-    "id": "3",
+    "id": "4",
     "imageUrl": "/projects/bazar-sodai.jpg",
     "imageSrcSet": "/projects/bazar-sodai-640.webp 640w, /projects/bazar-sodai-768.webp 768w, /projects/bazar-sodai-960.webp 960w",
     "title": "Bazar-Sodai",
@@ -92,7 +124,7 @@
     ]
   },
   {
-    "id": "4",
+    "id": "5",
     "imageUrl": "/projects/bazar-dor.jpg",
     "imageSrcSet": "/projects/bazar-dor-640.webp 640w, /projects/bazar-dor-768.webp 768w, /projects/bazar-dor-960.webp 960w",
     "title": "Bazar-Dor",
@@ -120,7 +152,7 @@
     ]
   },
   {
-    "id": "5",
+    "id": "6",
     "imageUrl": "/projects/fit-log.jpg",
     "imageSrcSet": "/projects/fit-log-640.webp 640w, /projects/fit-log-768.webp 768w, /projects/fit-log-960.webp 960w",
     "title": "Fit-Log",
@@ -148,7 +180,7 @@
     ]
   },
   {
-    "id": "6",
+    "id": "7",
     "imageUrl": "/projects/bnews.jpg",
     "imageSrcSet": "/projects/bnews-640.webp 640w, /projects/bnews-768.webp 768w, /projects/bnews-960.webp 960w",
     "title": "Bangla News 24",
@@ -175,7 +207,7 @@
     ]
   },
   {
-    "id": "7",
+    "id": "8",
     "imageUrl": "/projects/blog.jpg",
     "imageSrcSet": "/projects/blog-640.webp 640w, /projects/blog-768.webp 768w, /projects/blog-960.webp 960w",
     "title": "Django Blog App",
@@ -201,7 +233,7 @@
     ]
   },
   {
-    "id": "8",
+    "id": "9",
     "imageUrl": "/book-vibe.png",
     "title": "Book Vibe",
     "description": " A responsive book management web application that allows users to explore books, view detailed information, manage their Read List and Wish List, sort saved books, and visualize their reading progress.",
@@ -213,7 +245,7 @@
     "liveUrl": "https://book-vibe-b1db.vercel.app/"
   },
   {
-    "id": "9",
+    "id": "10",
     "imageUrl": "/devstack.png",
     "title": "DevStack",
     "description": "A developer-focused web application built with React and TypeScript for exploring development resources and technologies.",
@@ -225,7 +257,7 @@
     "liveUrl": "https://devstack-tawny.vercel.app/"
   },
   {
-    "id": "10",
+    "id": "11",
     "imageUrl": "/bpl-dream.png",
     "title": "BPL Dream Eleven",
     "description": "A cricket team management web application where users can explore players and build their own dream team.",
@@ -237,7 +269,7 @@
     "liveUrl": "https://bpl-dream-eleven-eight.vercel.app/"
   },
   {
-    "id": "11",
+    "id": "12",
     "imageUrl": "/country-image.png",
     "title": "Country Explorer",
     "description": "A country exploration web application where users can explore country information, view details, and mark countries as visited.",
@@ -249,7 +281,7 @@
     "liveUrl": "https://lighthearted-chimera-34f191.netlify.app/"
   },
   {
-    "id": "12",
+    "id": "13",
     "imageUrl": "/natures-platter.png",
     "title": "Nature's Platter",
     "description": "A responsive food website showcasing fresh and healthy food items with a clean and user-friendly interface.",
@@ -261,7 +293,7 @@
     "liveUrl": "https://rezasdsju.github.io/Nature-s-Platter/"
   },
   {
-    "id": "13",
+    "id": "14",
     "imageUrl": "/grocery.png",
     "title": "Grocery Store",
     "description": "A grocery product search application where users can search for products and filter items based on their stock availability.",
@@ -273,7 +305,7 @@
     "liveUrl": "https://search-app-self.vercel.app/"
   },
   {
-    "id": "14",
+    "id": "15",
     "imageUrl": "/tic-tac.png",
     "title": "Tic-Tac-Toe",
     "description": "A classic Tic-Tac-Toe game built with React and TypeScript, allowing two players to play the game and displaying the winner when the game ends.",
@@ -285,7 +317,7 @@
     "liveUrl": "https://tic-tac-toe-game-eta-beige.vercel.app/"
   },
   {
-    "id": "15",
+    "id": "16",
     "imageUrl": "/portfolio.png",
     "title": "Developer Portfolio",
     "description": "A personal developer portfolio website showcasing my skills, projects, and experience.",
