@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import About from "./components/About";
+import BackToTop from "./components/BackToTop";
 import Banner from "./components/Banner";
 import Contact from "./components/Contact";
 import Experience from "./components/Experience";
@@ -8,39 +9,41 @@ import Nav from "./components/Nav";
 import Projects from "./components/projects/Projects";
 import type { ProjectDataType } from "./types/projectDataTypes";
 
-
 const projectsDataFetch = async (): Promise<ProjectDataType[]> => {
-  const res = await fetch('/data.json')
-  const data = await res.json()
-  return data
-}
+  const res = await fetch("/data.json");
+  const data = await res.json();
+  return data;
+};
 
-const projectsDataPromise = projectsDataFetch()
+const projectsDataPromise = projectsDataFetch();
 
 const ProjectsFallback = () => (
   <section
     id="projects"
     aria-hidden="true"
-    className="border-t border-slate-200 bg-slate-50 py-20 sm:py-24"
+    className="border-t border-slate-200 bg-slate-50 py-20 sm:py-28 dark:border-white/10 dark:bg-slate-900/40"
   >
     <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-      <div className="h-4 w-32 animate-pulse rounded bg-slate-200" />
-      <div className="mt-4 h-10 w-64 animate-pulse rounded bg-slate-200" />
+      <div className="h-4 w-32 animate-pulse rounded bg-slate-200 dark:bg-white/10" />
+      <div className="mt-4 h-10 w-64 animate-pulse rounded bg-slate-200 dark:bg-white/10" />
       <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {[0, 1, 2].map((key) => (
-          <div key={key} className="h-96 animate-pulse rounded-2xl bg-slate-200" />
+          <div
+            key={key}
+            className="h-96 animate-pulse rounded-2xl bg-slate-200 dark:bg-white/5"
+          />
         ))}
       </div>
     </div>
   </section>
-)
+);
 
 function App() {
   return (
     <>
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-slate-900 focus:shadow-lg"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-slate-900 focus:shadow-lg focus:ring-2 focus:ring-blue-700 dark:focus:bg-slate-900 dark:focus:text-white dark:focus:ring-blue-400"
       >
         Skip to content
       </a>
@@ -55,8 +58,9 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <BackToTop />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

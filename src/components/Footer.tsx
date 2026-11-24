@@ -9,23 +9,43 @@ const footerLinks = [
   { href: "#contact", label: "Contact" },
 ];
 
+const socialLinks = [
+  {
+    href: "https://github.com/rezasdsju",
+    label: "GitHub",
+    icon: IoLogoGithub,
+  },
+  {
+    href: "https://www.linkedin.com/in/rezaul-karim-rifat-833154370/",
+    label: "LinkedIn",
+    icon: FaLinkedin,
+  },
+  {
+    href: "mailto:rezaul2002104@gmail.com",
+    label: "Email",
+    icon: IoIosMail,
+  },
+];
+
 export default function Footer() {
   return (
     <footer className="border-t border-slate-800 bg-slate-950 text-slate-300">
-      <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <a
               href="#home"
               className="inline-flex items-center gap-2.5 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
             >
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-white text-[11px] font-bold tracking-wide text-slate-900">
+              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-sky-500 text-[11px] font-bold tracking-wide text-white shadow-lg shadow-blue-600/25">
                 RK
               </span>
-              <span className="text-base font-bold text-white">Rezaul Karim Rifat</span>
+              <span className="text-base font-bold text-white">
+                Rezaul Karim Rifat
+              </span>
             </a>
             <p className="mt-2 text-sm text-slate-400">
-              Full-stack developer · Dhaka, Bangladesh
+              Full-stack developer - Dhaka, Bangladesh
             </p>
           </div>
 
@@ -45,37 +65,26 @@ export default function Footer() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <a
-              href="https://github.com/rezasdsju"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-800 text-lg text-slate-300 transition-colors hover:border-slate-600 hover:bg-slate-900 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-            >
-              <IoLogoGithub aria-hidden="true" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/rezaul-karim-rifat-833154370/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-800 text-lg text-slate-300 transition-colors hover:border-slate-600 hover:bg-slate-900 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-            >
-              <FaLinkedin aria-hidden="true" />
-            </a>
-            <a
-              href="mailto:rezaul2002104@gmail.com"
-              aria-label="Email"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-800 text-lg text-slate-300 transition-colors hover:border-slate-600 hover:bg-slate-900 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-            >
-              <IoIosMail aria-hidden="true" />
-            </a>
+            {socialLinks.map(({ href, label, icon: Icon }) => (
+              <a
+                key={label}
+                href={href}
+                target={href.startsWith("mailto:") ? undefined : "_blank"}
+                rel={
+                  href.startsWith("mailto:") ? undefined : "noopener noreferrer"
+                }
+                aria-label={label}
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-800 text-lg text-slate-300 transition-all hover:-translate-y-0.5 hover:border-slate-600 hover:bg-slate-900 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+              >
+                <Icon aria-hidden="true" />
+              </a>
+            ))}
           </div>
         </div>
 
-        <div className="mt-8 flex flex-col gap-3 border-t border-slate-800 pt-6 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 Rezaul Karim Rifat. All rights reserved.</p>
-          <div className="flex flex-wrap gap-4">
+        <div className="mt-10 flex flex-col gap-3 border-t border-slate-800 pt-6 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+          <p>&copy; 2026 Rezaul Karim Rifat. All rights reserved.</p>
+          <div className="flex flex-wrap items-center gap-4">
             <a
               href="/resume.pdf"
               download
